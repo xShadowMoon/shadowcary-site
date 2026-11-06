@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN" class="l-zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>占卜和塔罗</title>
+<meta name="description" content="大肥鱼魔法小馆：每日签运和小雾手绘塔罗牌，网页上也能抽。">
+<style>
+@font-face{font-family:"Space Grotesk";font-weight:300 700;font-display:swap;src:url(/fonts/space-grotesk.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Inter;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+:root{--bg:#f5f3fc;--card:#fff;--ink:#2b2d42;--sub:#7d8199;--line:#e6e2f5;--pink:#fb7299;--lav:#8e7cf0;--chip:#efecfa;--gold:#d9b46a;--star:#f2a93b}
+@media(prefers-color-scheme:dark){:root{--bg:#14131b;--card:#1f1e29;--ink:#ecebf3;--sub:#9a98ad;--line:#2e2c3c;--chip:#2a2836}}
+html.l-en .zh,html.l-zh .en{display:none!important}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:14px;color:var(--sub)}
+nav b{font:700 16px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink)}
+nav .links{display:flex;gap:16px;align-items:center}
+nav a:hover{color:var(--pink)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:4px 10px;font-weight:600;font-size:13px}
+header{padding:28px 0 6px}
+h1{font:700 clamp(30px,5vw,44px)/1.15 "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+header p{color:var(--sub);margin-top:6px}
+.tabs{display:flex;gap:8px;margin:20px 0 6px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:99px;font-size:15px}
+.tab.on{background:var(--pink);border-color:var(--pink);color:#fff}
+section{padding:20px 0 30px}
+h2{margin-bottom:10px!important;font:700 24px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;margin-bottom:4px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:18px}
+.draw{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;border:0;padding:12px 22px;border-radius:14px;font-weight:700;font-size:16px;box-shadow:0 6px 18px rgba(251,114,153,.35)}
+.draw:hover{transform:translateY(-2px)}
+.hint{font-size:13px;color:var(--sub);margin-left:10px}
+/* fortune slip */
+.slip{margin-top:18px;max-width:620px;background:var(--card);border:2px solid var(--edge,var(--line));border-radius:22px;padding:16px;display:none}
+.slip.show{display:block;animation:pop .45s ease}
+@keyframes pop{from{opacity:0;transform:scale(.96) translateY(8px)}to{opacity:1;transform:none}}
+.slip .top{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);margin-bottom:10px}
+.slip .top span:last-child{background:var(--chip);padding:1px 10px;border-radius:99px}
+.hero{border-radius:16px;padding:18px;display:grid;grid-template-columns:auto 1fr 150px;gap:16px;align-items:center;color:var(--ink2)}
+.grade{font:900 60px/1.08 "PingFang SC","Microsoft YaHei",serif;text-align:center;min-width:64px}
+.poem{font-weight:700;font-size:17px;line-height:1.75}
+.read{font-size:13px;margin-top:8px;opacity:.9}
+.hero img{width:150px}
+.rows{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.box{background:var(--chip);border-radius:12px;padding:8px 12px}
+.box small{display:block;font-size:11.5px;color:var(--sub)}
+.box b{font-size:14.5px}
+.stars{color:var(--star);letter-spacing:1px}
+.rows.two{grid-template-columns:1fr 1fr}
+.rows.one{grid-template-columns:1fr}
+.guard{display:flex;gap:10px;align-items:center}
+.guard img{width:56px;height:56px;object-fit:contain}
+.grades{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.g{border-radius:18px;padding:14px;text-align:center;border:2px solid transparent}
+.g img{width:100%;max-width:140px;aspect-ratio:1;object-fit:contain}
+.g h3{font-size:24px;font-weight:900}
+.g p{font-size:12.5px;line-height:1.6;margin-top:4px;opacity:.85}
+.g .pc{font-size:12px;font-weight:700;opacity:.8}
+/* tarot */
+.stage{display:none;margin-top:18px;max-width:720px;background:var(--card);border:2px solid var(--gold);border-radius:22px;padding:20px;grid-template-columns:230px 1fr;gap:22px;align-items:center}
+.stage.show{display:grid}
+.flip{perspective:900px;width:230px;aspect-ratio:2/3.3}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .8s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.flip.open .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:14px;overflow:hidden;backface-visibility:hidden}
+.back{background:radial-gradient(circle at 50% 40%,#5a47a8,#2a1f55);border:3px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:46px}
+.front{transform:rotateY(180deg)}
+.front img{width:100%;height:100%;object-fit:cover;display:block}
+.front.rev img{transform:rotate(180deg)}
+.tinfo small{color:var(--sub)}
+.tinfo h3{font-size:30px;line-height:1.2}
+.tinfo .en-n{font:600 14px "Space Grotesk",Inter,sans-serif;color:var(--sub)}
+.pill{display:inline-block;font-size:12.5px;padding:2px 12px;border-radius:99px;margin:8px 0;font-weight:600}
+.pill.up{background:#fff3d6;color:#a8731a}
+.pill.down{background:#e9e4ff;color:#5a47a8}
+.tinfo .one{font-weight:700;font-size:17px}
+.tinfo dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin-top:12px;font-size:14px}
+.tinfo dt{color:var(--sub)}
+.tinfo .tips{margin-top:12px;font-size:13.5px;background:var(--chip);border-radius:12px;padding:8px 12px}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;text-align:center;cursor:pointer;transition:.18s}
+.t:hover{transform:translateY(-3px);border-color:var(--gold)}
+.t img{width:100%;aspect-ratio:2/3.3;object-fit:cover;border-radius:9px;display:block;transition:transform .4s}
+.deck.rev .t img{transform:rotate(180deg)}
+.t b{display:block;font-size:14px;margin-top:6px}
+.t span{font-size:11.5px;color:var(--sub)}
+.switch{display:inline-flex;background:var(--chip);border-radius:99px;padding:3px;margin-bottom:14px}
+.switch button{border:0;background:none;color:var(--ink);padding:5px 14px;border-radius:99px;font-size:13.5px}
+.switch button.on{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.1);font-weight:600}
+dialog{margin:auto;border:0;border-radius:22px;padding:0;max-width:720px;width:calc(100% - 32px);background:var(--card);color:var(--ink);box-shadow:0 20px 60px rgba(40,30,90,.35)}
+dialog::backdrop{background:rgba(20,18,30,.55)}
+dialog .stage{display:grid;margin:0;border:0;max-width:none}
+.x{position:absolute;right:12px;top:8px;border:0;background:none;font-size:24px;color:var(--sub);z-index:2}
+footer{padding:24px 0 40px;color:var(--sub);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+@media(max-width:640px){
+  .hero{grid-template-columns:auto 1fr;padding:14px}.hero img{display:none}.grade{font-size:48px}.poem{font-size:15.5px}
+  .rows{grid-template-columns:1fr 1fr 1fr}.rows.two{grid-template-columns:1fr}
+  .stage,.stage.show,dialog .stage{grid-template-columns:1fr;justify-items:center;text-align:center}.tinfo dl{text-align:left}
+  .flip{width:200px}.hint{display:block;margin:8px 0 0}
+}
+</style>
+<script>(function(){var l="zh";try{l=localStorage.getItem("lang")||l}catch(e){}if(location.hash=="#en")l="en";document.documentElement.className="l-"+l})();
+function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":"en";h.className="l-"+l;h.lang=l=="zh"?"zh-CN":"en";try{localStorage.setItem("lang",l)}catch(e){}}</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="/"><b>🐟 <span class="zh">雾冬hanaki 粉丝站</span><span class="en">Hanaki Fan Hub</span></b></a><div class="links"><a href="/wsw/"><span class="zh">图鉴</span><span class="en">Gallery</span></a><a href="/"><span class="zh">首页</span><span class="en">Home</span></a><button class="lang" onclick="toggleLang()"><span class="zh">EN</span><span class="en">中文</span></button></div></div></nav>
+
+<div class="wrap">
+<header>
+  <h1><span class="zh">🔮 大肥鱼魔法小馆</span><span class="en">🔮 Fortune &amp; Tarot</span></h1>
+  <p><span class="zh">群机器人的每日签运和小雾手绘塔罗牌。在 QQ 群里 @机器人 发「占卜」或「塔罗」就能抽，这里也能试试。每人每天结果固定，北京时间 0 点更新，仅供娱乐。</span><span class="en">The daily fortune slips and the hand-drawn tarot deck from our QQ group bot. Try a draw right here. One result per person per day, resets at midnight Beijing time. Just for fun. (Readings are written in Chinese.)</span></p>
+  <div class="tabs"><button class="tab on" data-p="fortune"><span class="zh">每日签运</span><span class="en">Daily fortune</span></button><button class="tab" data-p="tarot"><span class="zh">塔罗牌</span><span class="en">Tarot</span></button></div>
+</header>
+
+<div id="p-fortune">
+<section>
+  <h2><span class="zh">今日签运</span><span class="en">Today's fortune</span></h2>
+  <button class="draw" id="drawF">🎋 <span class="zh">抽一签</span><span class="en">Draw a slip</span></button><span class="hint"><span class="zh">今天抽过再点，结果也不会变哦</span><span class="en">Same result all day</span></span>
+  <div class="slip" id="slip"></div>
+</section>
+<section>
+  <h2><span class="zh">签级一览</span><span class="en">All fortune grades</span></h2>
+  <p class="sub"><span class="zh">六种签级和出现概率，每种都有好几首签诗和大肥鱼的解签。</span><span class="en">Six grades and their odds. Each has several poems and readings by 大肥鱼.</span></p>
+  <div class="grades" id="grades"></div>
+</section>
+</div>
+
+<div id="p-tarot" hidden>
+<section>
+  <h2><span class="zh">今日塔罗</span><span class="en">Today's tarot</span></h2>
+  <button class="draw" id="drawT">🃏 <span class="zh">抽一张塔罗</span><span class="en">Draw a card</span></button><span class="hint"><span class="zh">正位和逆位各一半机会</span><span class="en">Upright or reversed, 50/50</span></span>
+  <div class="stage" id="stage"></div>
+</section>
+<section>
+  <h2><span class="zh">22 张大阿卡纳</span><span class="en">The 22 Major Arcana</span></h2>
+  <p class="sub"><span class="zh">全部是小雾版手绘牌面，点一张看解读。</span><span class="en">All hand-drawn with 小雾. Tap a card for its meaning.</span></p>
+  <div class="switch" id="sw"><button class="on" data-r="0"><span class="zh">正位</span><span class="en">Upright</span></button><button data-r="1"><span class="zh">逆位</span><span class="en">Reversed</span></button></div>
+  <div class="deck" id="deck"></div>
+</section>
+</div>
+</div>
+
+<dialog id="dlg"><button class="x" onclick="dlg.close()" aria-label="close">×</button><div id="dlgIn"></div></dialog>
+
+<footer><div class="wrap"><span class="zh">粉丝自制，与雾冬hanaki 官方无关。占卜仅供娱乐。</span><span class="en">Fan-made, not affiliated with Hanaki. For fun only.</span> · <a href="https://shadowcary.com">Shadow Cary</a></div></footer>
+
+<script>
+var D,rev=0;
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var enc=function(f){return f.split("/").map(encodeURIComponent).join("/")};
+var sticker=function(f){return enc(f.replace(/^fortune\//,""))};
+function today(){return new Date(Date.now()+8*3600e3).toISOString().slice(0,10)}
+function uid(){var u;try{u=localStorage.getItem("fid")}catch(e){}if(!u){u=Math.random().toString(36).slice(2);try{localStorage.setItem("fid",u)}catch(e){}}return u}
+function rng(seed){var h=1779033703^seed.length;for(var i=0;i<seed.length;i++){h=Math.imul(h^seed.charCodeAt(i),3432918353);h=h<<13|h>>>19}
+  return function(){h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);h^=h>>>16;return (h>>>0)/4294967296}}
+var pick=function(r,a){return a[Math.floor(r()*a.length)]};
+function starStr(n){return "★★★★★".slice(0,n)+"☆☆☆☆☆".slice(0,5-n)}
+var BASE={6:4.5,5:4,4:3.4,3:3,2:2.5,1:1.8};
+
+function drawFortune(){
+  var r=rng(uid()+"|f|"+today()),F=D.fortune;
+  var tot=F.grades.reduce(function(s,g){return s+g.weight},0),x=r()*tot,g=F.grades[0];
+  for(var i=0;i<F.grades.length;i++){x-=F.grades[i].weight;if(x<0){g=F.grades[i];break}}
+  var poem=pick(r,g.poems),read=pick(r,g.reads);
+  var st=[0,0,0].map(function(){return Math.max(1,Math.min(5,Math.round(BASE[g.rank]+(r()*1.6-.8))))});
+  var P=F.pools,good=pick(r,P.good),bad=pick(r,P.bad),color=pick(r,P.colors),num=1+Math.floor(r()*99),time=pick(r,P.times),item=pick(r,P.items),gu=pick(r,F.guardians);
+  var s=document.getElementById("slip");
+  s.style.setProperty("--edge",g.colors.edge);
+  s.innerHTML='<div class="top"><span>大肥鱼 · 魔法小馆</span><span>'+today()+'</span></div>'+
+   '<div class="hero" style="background:'+g.colors.bg+';color:'+g.colors.ink+'"><div class="grade">'+esc(g.name)+'</div><div><div class="poem">'+poem.map(esc).join("<br>")+'</div><div class="read">🐟 大肥鱼解签：'+esc(read)+'</div></div><img src="'+sticker(g.sticker)+'" alt=""></div>'+
+   '<div class="rows"><div class="box"><small><span class="zh">运气</span><span class="en">Luck</span></small><b class="stars">'+starStr(st[0])+'</b></div><div class="box"><small><span class="zh">学习工作</span><span class="en">Work</span></small><b class="stars">'+starStr(st[1])+'</b></div><div class="box"><small><span class="zh">心情</span><span class="en">Mood</span></small><b class="stars">'+starStr(st[2])+'</b></div></div>'+
+   '<div class="rows two"><div class="box"><small><span class="zh">宜</span><span class="en">Do</span></small><b>'+esc(good)+'</b></div><div class="box"><small><span class="zh">忌</span><span class="en">Avoid</span></small><b>'+esc(bad)+'</b></div></div>'+
+   '<div class="rows one"><div class="box"><small><span class="zh">幸运清单</span><span class="en">Lucky list</span></small><b>'+esc(color)+' · '+num+' · '+esc(time)+' · '+esc(item)+'</b></div></div>'+
+   '<div class="rows one"><div class="box guard"><img src="../wsw/normal/'+gu.no+'.webp" alt=""><div><small><span class="zh">今日守护小雾</span><span class="en">Today\'s guardian</span></small><b>'+esc(gu.name)+'</b></div></div></div>';
+  s.classList.remove("show");void s.offsetWidth;s.classList.add("show");
+}
+function tarotHTML(c,isRev,anim){
+  var d=isRev?c.reversedDetail:c.uprightDetail,tip=(D.tarot.tips[c.no]||{})[isRev?"down":"up"]||[];
+  return '<div class="flip'+(anim?'':' open')+'"><div class="in"><div class="face back">✦</div><div class="face front'+(isRev?' rev':'')+'"><img src="'+enc(c.file)+'" alt=""></div></div></div>'+
+   '<div class="tinfo"><small>No.'+c.no+'</small><h3>'+esc(c.name)+'</h3><div class="en-n">'+esc(c.en)+'</div><span class="pill '+(isRev?'down':'up')+'">'+(isRev?'<span class="zh">逆位</span><span class="en">Reversed</span>':'<span class="zh">正位</span><span class="en">Upright</span>')+'</span>'+
+   '<div class="one">'+esc(isRev?c.reversed:c.upright)+'</div>'+
+   '<dl><dt><span class="zh">关键词</span><span class="en">Keywords</span></dt><dd>'+esc(d.keywords)+'</dd><dt><span class="zh">感情</span><span class="en">Love</span></dt><dd>'+esc(d.love)+'</dd><dt><span class="zh">学习工作</span><span class="en">Work</span></dt><dd>'+esc(d.work)+'</dd><dt><span class="zh">建议</span><span class="en">Advice</span></dt><dd>'+esc(d.advice)+'</dd></dl>'+
+   (tip.length?'<div class="tips">💡 '+tip.map(esc).join(" · ")+'</div>':'')+'</div>';
+}
+function drawTarot(){
+  var r=rng(uid()+"|t|"+today()),c=pick(r,D.tarot.cards),isRev=r()<.5,s=document.getElementById("stage");
+  s.innerHTML=tarotHTML(c,isRev,true);s.classList.add("show");
+  setTimeout(function(){s.querySelector(".flip").classList.add("open")},120);
+}
+function renderGrades(){
+  document.getElementById("grades").innerHTML=D.fortune.grades.map(function(g){
+    return '<div class="g" style="background:'+g.colors.bg+';color:'+g.colors.ink+';border-color:'+g.colors.edge+'"><img loading="lazy" src="'+sticker(g.sticker)+'" alt=""><h3>'+esc(g.name)+'</h3><div class="pc">'+esc(g.chance)+'</div><p>'+g.poems[0].map(esc).join("<br>")+'</p></div>'}).join("");
+}
+function renderDeck(){
+  var d=document.getElementById("deck");d.classList.toggle("rev",!!rev);
+  d.innerHTML=D.tarot.cards.map(function(c,i){return '<div class="t" data-i="'+i+'"><img loading="lazy" src="'+enc(c.file)+'" alt=""><b>'+esc(c.name)+'</b><span>'+esc(c.en)+'</span></div>'}).join("");
+}
+document.addEventListener("click",function(e){
+  var t=e.target.closest(".tab");if(t){document.querySelectorAll(".tab").forEach(function(x){x.classList.toggle("on",x===t)});document.getElementById("p-fortune").hidden=t.dataset.p!="fortune";document.getElementById("p-tarot").hidden=t.dataset.p!="tarot";history.replaceState(null,"",t.dataset.p=="tarot"?"#tarot":location.pathname);return}
+  var b=e.target.closest("#sw button");if(b){rev=+b.dataset.r;document.querySelectorAll("#sw button").forEach(function(x){x.classList.toggle("on",x===b)});document.getElementById("deck").classList.toggle("rev",!!rev);return}
+  var c=e.target.closest(".t");if(c){document.getElementById("dlgIn").innerHTML='<div class="stage">'+tarotHTML(D.tarot.cards[+c.dataset.i],!!rev,false)+'</div>';document.getElementById("dlg").showModal();return}
+  if(e.target.id=="dlg")e.target.close();
+});
+document.getElementById("drawF").onclick=drawFortune;
+document.getElementById("drawT").onclick=drawTarot;
+fetch("data.json").then(function(r){return r.json()}).then(function(d){D=d;renderGrades();renderDeck();
+  if(location.hash=="#tarot")document.querySelector('.tab[data-p=tarot]').click();});
+</script>
+</body>
+</html>
