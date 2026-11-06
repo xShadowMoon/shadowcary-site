@@ -18,7 +18,7 @@ export default {
         return new Response(r.body, { status: r.status, headers: h });
       }
       const a = new URL(url);
-      a.pathname = "/hanaki" + url.pathname;
+      if (!url.pathname.startsWith("/fonts/")) a.pathname = "/hanaki" + url.pathname;
       return env.ASSETS.fetch(new Request(a, request));
     }
     return env.ASSETS.fetch(request);
