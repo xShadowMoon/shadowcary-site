@@ -55,6 +55,13 @@ h2{font:700 28px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui
 footer{padding:36px 0 48px;color:var(--sub);font-size:13.5px;border-top:1px solid var(--line);margin-top:30px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.hero,.tiles{grid-template-columns:1fr}.stack{height:230px}.stack img{width:140px}.stack img:nth-child(2){width:160px}nav .links a:not(:last-child){display:none}}
+.links2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lk{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:.2s}
+a.lk:hover{border-color:var(--pink);transform:translateY(-2px)}
+.lk .e{font-size:28px}
+.lk b{display:block;font-size:15.5px}
+.lk small{color:var(--sub);font-size:13px}
+@media(max-width:820px){.links2{grid-template-columns:1fr}}
 </style>
 <script>(function(){var d="zh",l=d;try{l=localStorage.getItem("lang")||d}catch(e){}if(location.hash=="#zh")l="zh";if(location.hash=="#en")l="en";document.documentElement.className="l-"+l;document.documentElement.lang=l=="zh"?"zh-CN":"en"})();
 function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":"en";h.className="l-"+l;h.lang=l=="zh"?"zh-CN":"en";try{localStorage.setItem("lang",l)}catch(e){}}</script>
@@ -71,6 +78,7 @@ function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":
     <div class="btns">
       <a class="btn p" href="/songs/">🎤 <span class="zh">歌切合集</span><span class="en">Song clips</span></a>
       <a class="btn" href="https://live.bilibili.com/373317">📺 <span class="zh">B站直播间</span><span class="en">Live room</span></a>
+      <a class="btn" href="https://space.bilibili.com/3707002725337436">✂️ <span class="zh">切片man 主页</span><span class="en">Clipper channel</span></a>
     </div>
   </div>
   <div class="stack">
@@ -102,6 +110,16 @@ function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":
     <a class="c" href="wsw/"><img loading="lazy" src="wsw/normal/085.webp" alt=""><b>雾星好评</b><span>谐音梗博物馆</span></a>
   </div>
   <div class="btns"><a class="btn p" href="wsw/">🃏 <span class="zh">打开完整图鉴（166 张）</span><span class="en">Open the full gallery (166 cards)</span></a><a class="btn" href="wsw/#limited"><span class="zh">节日限定</span><span class="en">Holiday cards</span></a></div>
+</section>
+
+<section class="wrap" id="links">
+  <h2><span class="zh">传送门</span><span class="en">Links</span></h2>
+  <p class="sub"><span class="zh">找小雾和切片都在这里。</span><span class="en">Where to find Hanaki and the clips.</span></p>
+  <div class="links2">
+    <a class="lk" href="https://live.bilibili.com/373317"><span class="e">📺</span><div><b><span class="zh">B站直播间</span><span class="en">Bilibili live room</span></b><small><span class="zh">房间号 373317，开播会在群里提醒</span><span class="en">Room 373317</span></small></div></a>
+    <a class="lk" href="https://space.bilibili.com/3707002725337436"><span class="e">✂️</span><div><b><span class="zh">切片man · Ro琪希</span><span class="en">Clipper · Ro琪希</span></b><small><span class="zh">歌切和直播切片都在这个号上传</span><span class="en">Song clips and stream highlights on Bilibili</span></small></div></a>
+    <div class="lk"><span class="e">🐧</span><div><b><span class="zh">粉丝群</span><span class="en">QQ fan group</span></b><small><span class="zh">QQ 群 753070660，WSW 抽卡和占卜都在群里</span><span class="en">QQ group 753070660</span></small></div></div>
+  </div>
 </section>
 
 <footer><div class="wrap"><span><span class="zh">粉丝自制，与雾冬hanaki 官方无关。</span><span class="en">Fan-made, not affiliated with Hanaki.</span></span><a href="https://shadowcary.com">Made by Shadow Cary</a></div></footer>
