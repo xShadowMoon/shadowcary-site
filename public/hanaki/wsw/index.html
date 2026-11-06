@@ -95,9 +95,9 @@ function render(){
   var list=ALL.filter(inTab).filter(function(c){return !ser||c.series==ser}).filter(function(c){return !q||(c.name+(c.variant||"")+(c.short||"")+c.no).indexOf(q)>=0});
   var g=document.getElementById("grid");
   if(!list.length){g.innerHTML='<div class="empty"><span class="zh">没有找到</span><span class="en">Nothing found</span></div>';return}
-  g.innerHTML=list.map(function(c){var i=ALL.indexOf(c);
+  g.innerHTML=list.map(function(c,k){var i=ALL.indexOf(c);
     var tag=c.type=="holiday-rare"?'<span class="tg r">稀有</span>':c.type=="special"?'<span class="tg r">特别</span>':c.type=="holiday"?'<span class="tg">'+esc((c.label||"").replace("限定",""))+'</span>':"";
-    return '<div class="c" data-i="'+i+'"><span class="no">No.'+c.no+'</span>'+tag+'<img loading="lazy" src="'+src(c.file)+'" alt="'+esc(c.name)+'"><b>'+esc(c.name)+'</b>'+(c.variant?'<span class="v">'+esc(c.variant)+'</span>':'')+'</div>'}).join("");
+    return '<div class="c" data-i="'+i+'"><span class="no">No.'+c.no+'</span>'+tag+'<img loading="'+(k<18?"eager":"lazy")+'" src="'+src(c.file)+'" alt="'+esc(c.name)+'"><b>'+esc(c.name)+'</b>'+(c.variant?'<span class="v">'+esc(c.variant)+'</span>':'')+'</div>'}).join("");
 }
 function renderSeries(){
   var s=[...new Set(ALL.filter(inTab).map(function(c){return c.series}))];
