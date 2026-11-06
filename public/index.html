@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Cary</title>
+<meta name="description" content="Shadow Cary — bots, song archives, AI covers and small games, built for fun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0f17; --bg2:#141826; --card:#181d2d; --line:#262d44;
+  --text:#e9ecf5; --muted:#9aa3bd; --accent:#8fb6ff; --accent2:#c7a3ff; --warm:#ffcf8a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);background:rgba(13,15,23,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 18px "Space Grotesk";letter-spacing:.5px;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-style:normal;color:#0d0f17;font-size:14px}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+.hero{padding:96px 0 72px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-200px -100px auto auto;width:620px;height:620px;background:radial-gradient(circle,rgba(143,182,255,.20),transparent 60%);pointer-events:none}
+.hero:after{content:"";position:absolute;left:-160px;top:120px;width:480px;height:480px;background:radial-gradient(circle,rgba(199,163,255,.16),transparent 60%);pointer-events:none}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 12px;background:var(--bg2)}
+.tag b{width:7px;height:7px;border-radius:50%;background:#5be49b;box-shadow:0 0 10px #5be49b}
+h1{font:700 clamp(40px,7vw,72px)/1.05 "Space Grotesk";margin:22px 0 18px;letter-spacing:-1px}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2) 60%,var(--warm));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--muted);max-width:620px}
+.lead em{font-style:normal;color:var(--text)}
+.cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--bg2);transition:.2s}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn:hover{transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:56px}
+.stat{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--bg2)}
+.stat strong{display:block;font:700 26px "Space Grotesk"}
+.stat span{font-size:13px;color:var(--muted)}
+section{padding:64px 0}
+h2{font:700 32px "Space Grotesk";letter-spacing:-.5px}
+.sub{color:var(--muted);margin:6px 0 30px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{border-color:#3b4566;transform:translateY(-3px)}
+.card.big{grid-column:span 4}
+.card.half{grid-column:span 3}
+.thumb{height:200px;background:#10131f center top/cover no-repeat;border-bottom:1px solid var(--line);position:relative}
+.big .thumb{height:260px}
+.thumb.art{display:grid;place-items:center;font-size:64px}
+.thumb .badge{position:absolute;left:14px;top:14px;font-size:12px;font-weight:600;background:rgba(13,15,23,.8);border:1px solid var(--line);padding:4px 10px;border-radius:99px}
+.body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.body h3{font:700 20px "Space Grotesk";margin-bottom:4px}
+.body .zh{font-size:13px;color:var(--accent2);margin-bottom:8px}
+.body p{color:var(--muted);font-size:15px;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips span{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:2px 8px}
+.link{margin-top:16px;font-size:14px;font-weight:600;color:var(--accent)}
+.link.off{color:var(--muted);font-weight:500}
+.subs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sub-item{border:1px dashed #333c5a;border-radius:14px;padding:18px;background:var(--bg2)}
+.sub-item code{font:600 15px "Space Grotesk";color:var(--warm)}
+.sub-item p{font-size:14px;color:var(--muted);margin-top:6px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.stack{display:flex;flex-wrap:wrap;gap:8px}
+.stack span{background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:10px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){
+  .grid{grid-template-columns:1fr}.card,.card.big,.card.half{grid-column:auto}
+  .stats{grid-template-columns:repeat(2,1fr)}.subs,.about{grid-template-columns:1fr}
+  nav ul{display:none}.hero{padding:64px 0 48px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#"><i>SC</i>Shadow Cary</a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#sites">Sites</a></li><li><a href="#about">About</a></li><li><a href="https://github.com/xShadowMoon">GitHub</a></li></ul>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag"><b></b>Building things for fun · 做点好玩的东西</span>
+  <h1>Hi, I'm <span>Shadow Cary</span>.</h1>
+  <p class="lead">I build <em>chat bots, song archives, AI voice covers and small games</em> — mostly for the community around the VTuber 雾冬hanaki, and partly just because it's fun.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" href="https://hanaki.shadowcary.com">Hanaki fan hub →</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>88+</strong><span>collectible WSW cards</span></div>
+    <div class="stat"><strong>20+</strong><span>bot commands</span></div>
+    <div class="stat"><strong>24/7</strong><span>live-stream alerts</span></div>
+    <div class="stat"><strong>∞</strong><span>song clips archived</span></div>
+  </div>
+</div></header>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">Things I've made and keep running. 正在运行的作品。</p>
+  <div class="grid">
+
+    <article class="card big">
+      <div class="thumb" style="background-image:url(img/wsw.webp)"><span class="badge">🟢 Live</span></div>
+      <div class="body">
+        <h3>WuSuoWei — Card Gacha Bot</h3>
+        <div class="zh">雾锁胃 · QQ 官方机器人卡池</div>
+        <p>A daily card-draw game inside QQ groups. 88 regular cards, 71 alternate-color variants, shiny rolls, holiday limited editions, a collection book, achievements and fortune telling with tarot.</p>
+        <div class="chips"><span>Node.js</span><span>QQ Bot API</span><span>Image rendering</span><span>Game design</span></div>
+        <a class="link off">Card gallery coming to hanaki.shadowcary.com</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/bot.webp)"><span class="badge">🟢 Live</span></div>
+      <div class="body">
+        <h3>Hanaki Group Bot</h3>
+        <div class="zh">QQ 群机器人 · 开播提醒</div>
+        <p>Stream-start alerts, new video & post pushes, daily stats, AI chat with two personas, and a web control panel.</p>
+        <div class="chips"><span>NapCat</span><span>DeepSeek</span><span>Bilibili API</span></div>
+      </div>
+    </article>
+
+    <article class="card half">
+      <div class="thumb art" style="background:linear-gradient(135deg,#1d2a4a,#3a2457)">🎤<span class="badge">🟢 Auto-updated</span></div>
+      <div class="body">
+        <h3>Hanaki Song Clips</h3>
+        <div class="zh">歌切合集网页</div>
+        <p>Every song sung on stream, clipped, tagged with the original artist, searchable and updated automatically.</p>
+        <div class="chips"><span>GitHub Pages</span><span>Automation</span></div>
+        <a class="link" href="https://xshadowmoon.github.io/hanaki-gequ/">Open the archive →</a>
+      </div>
+    </article>
+
+    <article class="card half">
+      <div class="thumb" style="background-image:url(img/live.webp)"><span class="badge">Tools</span></div>
+      <div class="body">
+        <h3>Live Clip & Danmaku Tools</h3>
+        <div class="zh">直播切片 · 弹幕助手</div>
+        <p>Auto recording, clip uploads, a live-chat helper with reminders and FAQ replies, plus word clouds and popularity charts after each stream.</p>
+        <div class="chips"><span>Python</span><span>Syncthing</span><span>Bilibili</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb art" style="background:linear-gradient(135deg,#2b1d3f,#162b3d)">🎧<span class="badge">Experiment</span></div>
+      <div class="body">
+        <h3>AI Voice Covers</h3>
+        <div class="zh">AI 翻唱</div>
+        <p>Training a singing-voice model and iterating on mixing until the lyrics stay clear. Many versions, many lessons.</p>
+        <div class="chips"><span>RVC</span><span>Audio mixing</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb art" style="background:linear-gradient(135deg,#1c3a2c,#1a2340)">🟢<span class="badge">Game</span></div>
+      <div class="body">
+        <h3>Slime Mimic</h3>
+        <div class="zh">吞噬史莱姆 · Godot 小游戏</div>
+        <p>A small Godot game about a slime that eats things and copies their abilities.</p>
+        <div class="chips"><span>Godot</span><span>GDScript</span></div>
+        <a class="link off">Web build coming soon</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/tarot.webp)"><span class="badge">Feature</span></div>
+      <div class="body">
+        <h3>Fortune & Tarot Cards</h3>
+        <div class="zh">占卜 · 塔罗</div>
+        <p>Daily fortune slips with poems, a fortune leaderboard and an illustrated tarot deck with upright and reversed readings.</p>
+        <div class="chips"><span>Illustration</span><span>Card layout</span></div>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section id="sites"><div class="wrap">
+  <h2>Sites under shadowcary.com</h2>
+  <p class="sub">Each project gets its own corner. 每个项目一个子站。</p>
+  <div class="subs">
+    <div class="sub-item"><code>shadowcary.com</code><p>This page — portfolio & links.</p></div>
+    <div class="sub-item"><code>hanaki.shadowcary.com</code><p>Fan hub: song clip archive and the full WSW card gallery.</p></div>
+    <div class="sub-item"><code>panel.shadowcary.com</code><p>Private bot control panel (login required).</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div>
+    <h2>About</h2>
+    <p class="sub">关于我</p>
+    <p>I'm Cary, based in California. I like turning a small idea into something people in a group chat actually use every day — a card to collect, a reminder that a stream just started, a song you can find again.</p>
+    <p>Most of what you see here was built together with AI coding tools, which I treat as a very patient teammate.</p>
+  </div>
+  <div>
+    <h3 style="font:700 18px 'Space Grotesk';margin:8px 0 14px">Tools I use</h3>
+    <div class="stack"><span>JavaScript / Node.js</span><span>Python</span><span>Godot</span><span>GitHub Pages</span><span>Cloudflare</span><span>Claude</span><span>DeepSeek</span><span>Bilibili API</span><span>QQ Bot</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Shadow Cary · shadowcary.com</span>
+  <span><a href="https://github.com/xShadowMoon">GitHub @xShadowMoon</a></span>
+</div></footer>
+</body>
+</html>
