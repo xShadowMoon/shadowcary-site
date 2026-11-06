@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN" class="l-zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WSW 图鉴</title>
+<meta name="description" content="今日WSW 全部卡牌图鉴：普通款、异色款、节日限定。">
+<style>
+@font-face{font-family:"Space Grotesk";font-weight:300 700;font-display:swap;src:url(/fonts/space-grotesk.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Inter;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+:root{--bg:#f5f3fc;--card:#fff;--ink:#2b2d42;--sub:#7d8199;--line:#e6e2f5;--pink:#fb7299;--lav:#8e7cf0;--chip:#efecfa;--gold:#e0a43a}
+@media(prefers-color-scheme:dark){:root{--bg:#14131b;--card:#1f1e29;--ink:#ecebf3;--sub:#9a98ad;--line:#2e2c3c;--chip:#2a2836}}
+html.l-en .zh,html.l-zh .en{display:none!important}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:14px;color:var(--sub)}
+nav b{font:700 16px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink)}
+nav .links{display:flex;gap:16px;align-items:center}
+nav a:hover{color:var(--pink)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:4px 10px;font:600 13px Inter,sans-serif;cursor:pointer}
+header{padding:28px 0 8px}
+h1{font:700 clamp(30px,5vw,44px)/1.15 "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+header p{color:var(--sub);margin-top:6px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid var(--line)}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:99px;font:inherit;font-size:14px;cursor:pointer}
+.tab.on{background:var(--pink);border-color:var(--pink);color:#fff}
+.tab small{opacity:.7;margin-left:4px}
+.bar input{flex:1 1 180px;min-width:0;font:inherit;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.series{display:flex;gap:6px;flex-wrap:wrap;padding:12px 0 4px}
+.chip{border:0;background:var(--chip);color:var(--ink);padding:4px 11px;border-radius:99px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--lav);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px;padding:14px 0 40px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 10px 12px;text-align:center;cursor:pointer;transition:.18s;position:relative}
+.c:hover{transform:translateY(-3px);border-color:var(--pink)}
+.c img{width:100%;aspect-ratio:1;object-fit:contain;display:block}
+.c .no{position:absolute;left:10px;top:8px;font:600 11px Inter,sans-serif;color:var(--sub)}
+.c .tg{position:absolute;right:8px;top:7px;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--chip);color:var(--lav)}
+.c .tg.r{background:#fff3d9;color:#b77a10}
+.c b{display:block;font-size:14px;margin-top:4px}
+.c span.v{font-size:12px;color:var(--sub)}
+.empty{grid-column:1/-1;text-align:center;color:var(--sub);padding:40px 0}
+dialog{margin:auto;border:0;border-radius:22px;padding:0;max-width:440px;width:calc(100% - 32px);background:var(--card);color:var(--ink);box-shadow:0 20px 60px rgba(40,30,90,.35)}
+dialog::backdrop{background:rgba(20,18,30,.55)}
+.m{padding:20px 22px 22px;text-align:center}
+.m img{width:78%;max-width:320px;aspect-ratio:1;object-fit:contain}
+.m h3{font-size:22px;margin-top:6px}
+.m .meta{color:var(--sub);font-size:13px;margin-top:2px}
+.m q{display:block;margin:14px 0 6px;font-size:15px}
+.m .hab{font-size:13px;color:var(--sub)}
+.m .vs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.m .vs button{border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:4px;cursor:pointer;width:64px}
+.m .vs button.on{border-color:var(--pink)}
+.m .vs img{width:100%}
+.m .vs span{display:block;font-size:11px;color:var(--sub)}
+.x{position:absolute;right:12px;top:10px;border:0;background:none;font-size:22px;color:var(--sub);cursor:pointer}
+footer{padding:24px 0 40px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr);gap:8px}.c{padding:6px 6px 8px;border-radius:12px}.c b{font-size:12px}.c .no,.c .tg{display:none}nav .links a:first-child{display:none}}
+</style>
+<script>(function(){var l="zh";try{l=localStorage.getItem("lang")||l}catch(e){}if(location.hash=="#en")l="en";if(location.hash=="#zh")l="zh";document.documentElement.className="l-"+l})();
+function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":"en";h.className="l-"+l;h.lang=l=="zh"?"zh-CN":"en";try{localStorage.setItem("lang",l)}catch(e){}}</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="/"><b>🐟 <span class="zh">雾冬hanaki 粉丝站</span><span class="en">Hanaki Fan Hub</span></b></a><div class="links"><a href="/songs/"><span class="zh">歌切</span><span class="en">Songs</span></a><a href="/"><span class="zh">首页</span><span class="en">Home</span></a><button class="lang" onclick="toggleLang()"><span class="zh">EN</span><span class="en">中文</span></button></div></div></nav>
+
+<div class="wrap">
+<header>
+  <h1><span class="zh">WSW 图鉴</span><span class="en">WSW Card Gallery</span></h1>
+  <p><span class="zh">今日WSW 的全部卡牌。在 QQ 群里 @机器人 发「wsw」每天抽一张；异色约 1/40，闪光约 1/100。点卡片看台词。</span><span class="en">Every card from the daily WSW draw. @ the bot in the QQ group with "wsw" to draw one a day. Alternate colors are about 1 in 40. Tap a card to read its line.</span></p>
+</header>
+<div class="bar">
+  <button class="tab on" data-t="normal"><span class="zh">普通款</span><span class="en">Regular</span><small id="n-normal"></small></button>
+  <button class="tab" data-t="variant"><span class="zh">异色款</span><span class="en">Alt colors</span><small id="n-variant"></small></button>
+  <button class="tab" data-t="limited"><span class="zh">节日限定</span><span class="en">Holiday</span><small id="n-limited"></small></button>
+  <input id="q" placeholder="搜名字，比如 猫猫">
+</div>
+<div class="series" id="series"></div>
+<main class="grid" id="grid"></main>
+</div>
+
+<dialog id="dlg"><button class="x" onclick="dlg.close()" aria-label="close">×</button><div class="m" id="m"></div></dialog>
+
+<footer><div class="wrap"><span class="zh">粉丝自制，与雾冬hanaki 官方无关。卡牌插画为群内抽卡游戏所用。</span><span class="en">Fan-made, not affiliated with Hanaki.</span> · <a href="https://shadowcary.com">Shadow Cary</a></div></footer>
+
+<script>
+var ALL=[],tab="normal",ser="",SER={"小雾动物园":"Zoo","谐音梗博物馆":"Pun Museum","限定":"Limited"};
+var en=function(){return document.documentElement.className=="l-en"};
+var src=function(f){return f.split("/").map(encodeURIComponent).join("/")};
+var esc=function(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+function base(no){return ALL.find(function(c){return c.no==no&&(c.type=="normal"||c.type=="holiday")})}
+function inTab(c){if(tab=="normal")return c.type=="normal";if(tab=="variant")return c.type=="variant"||c.type=="special";return c.type=="holiday"||c.type=="holiday-rare"}
+function render(){
+  var q=document.getElementById("q").value.trim();
+  var list=ALL.filter(inTab).filter(function(c){return !ser||c.series==ser}).filter(function(c){return !q||(c.name+(c.variant||"")+(c.short||"")+c.no).indexOf(q)>=0});
+  var g=document.getElementById("grid");
+  if(!list.length){g.innerHTML='<div class="empty"><span class="zh">没有找到</span><span class="en">Nothing found</span></div>';return}
+  g.innerHTML=list.map(function(c){var i=ALL.indexOf(c);
+    var tag=c.type=="holiday-rare"?'<span class="tg r">稀有</span>':c.type=="special"?'<span class="tg r">特别</span>':c.type=="holiday"?'<span class="tg">'+esc((c.label||"").replace("限定",""))+'</span>':"";
+    return '<div class="c" data-i="'+i+'"><span class="no">No.'+c.no+'</span>'+tag+'<img loading="lazy" src="'+src(c.file)+'" alt="'+esc(c.name)+'"><b>'+esc(c.name)+'</b>'+(c.variant?'<span class="v">'+esc(c.variant)+'</span>':'')+'</div>'}).join("");
+}
+function renderSeries(){
+  var s=[...new Set(ALL.filter(inTab).map(function(c){return c.series}))];
+  if(s.indexOf(ser)<0)ser="";
+  document.getElementById("series").innerHTML=s.length<2?"":['<button class="chip'+(ser?'':' on')+'" data-s=""><span class="zh">全部</span><span class="en">All</span></button>'].concat(s.map(function(x){return '<button class="chip'+(ser==x?' on':'')+'" data-s="'+esc(x)+'"><span class="zh">'+esc(x)+'</span><span class="en">'+(SER[x]||esc(x))+'</span></button>'})).join("");
+}
+function show(i){
+  var c=ALL[i],b=base(c.no)||c;
+  var vs=ALL.filter(function(x){return x.no==c.no});
+  var meta=(b.series||"")+(b.label?" · "+b.label:"")+" · No."+c.no;
+  document.getElementById("m").innerHTML='<img src="'+src(c.file)+'" alt=""><h3>'+esc(b.name)+(c.variant?' <small style="font-size:15px;color:var(--pink)">'+esc(c.variant)+'</small>':'')+'</h3><div class="meta">'+esc(meta)+'</div>'+(b.line?'<q>'+esc(b.line)+'</q>':'')+(b.habitat?'<div class="hab"><span class="zh">出没地点：</span><span class="en">Found at: </span>'+esc(b.habitat)+'</div>':'')+
+    (vs.length>1?'<div class="vs">'+vs.map(function(v){return '<button class="'+(v===c?'on':'')+'" data-i="'+ALL.indexOf(v)+'"><img src="'+src(v.file)+'" alt=""><span>'+esc(v.variant||"原色")+'</span></button>'}).join("")+'</div>':'');
+  var d=document.getElementById("dlg");if(!d.open)d.showModal();
+}
+document.addEventListener("click",function(e){
+  var t=e.target.closest(".tab");if(t){tab=t.dataset.t;document.querySelectorAll(".tab").forEach(function(x){x.classList.toggle("on",x===t)});renderSeries();render();return}
+  var s=e.target.closest(".chip");if(s){ser=s.dataset.s;renderSeries();render();return}
+  var c=e.target.closest(".c,.vs button");if(c){show(+c.dataset.i);return}
+  if(e.target.id=="dlg")e.target.close();
+});
+document.getElementById("q").addEventListener("input",render);
+fetch("cards.json").then(function(r){return r.json()}).then(function(d){
+  ALL=d.cards;
+  var n={normal:0,variant:0,limited:0};ALL.forEach(function(c){if(c.type=="normal")n.normal++;else if(c.type=="variant"||c.type=="special")n.variant++;else n.limited++});
+  for(var k in n)document.getElementById("n-"+k).textContent=n[k];
+  var h=location.hash.slice(1);if(h=="variant"||h=="limited"){tab=h;document.querySelectorAll(".tab").forEach(function(x){x.classList.toggle("on",x.dataset.t==h)})}
+  renderSeries();render();
+});
+</script>
+</body>
+</html>

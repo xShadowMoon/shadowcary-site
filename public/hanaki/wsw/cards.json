@@ -1,0 +1,1619 @@
+{
+ "generated": "2026-11-06",
+ "count": 166,
+ "cards": [
+  {
+   "no": "001",
+   "name": "雾冬恐龙",
+   "short": "恐龙",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/001.webp",
+   "line": "道理我都懂，饭先给我。",
+   "habitat": "零食柜附近"
+  },
+  {
+   "no": "001",
+   "name": "雾冬恐龙",
+   "variant": "霸王龙",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/001-霸王龙.webp"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "short": "猫猫",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/002.webp",
+   "line": "可以摸，但只能摸一下。",
+   "habitat": "键盘与纸箱之间"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "variant": "三花",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/002-三花.webp"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "variant": "布偶",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/002-布偶.webp"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "variant": "暹罗",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/002-暹罗.webp"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "variant": "橘猫",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/002-橘猫.webp"
+  },
+  {
+   "no": "002",
+   "name": "雾冬猫猫",
+   "variant": "狸花",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/002-狸花.webp"
+  },
+  {
+   "no": "003",
+   "name": "雾冬海豹",
+   "short": "海豹",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/003.webp",
+   "line": "我已经翻过身了，很努力了。",
+   "habitat": "凉凉的枕头旁"
+  },
+  {
+   "no": "003",
+   "name": "雾冬海豹",
+   "variant": "斑海豹",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/003-斑海豹.webp"
+  },
+  {
+   "no": "003",
+   "name": "雾冬海豹",
+   "variant": "海狮",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/003-海狮.webp"
+  },
+  {
+   "no": "004",
+   "name": "雾冬面包兔",
+   "short": "面包兔",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/004.webp",
+   "line": "吃饱了，暂时不接受移动。",
+   "habitat": "温暖的沙发角落"
+  },
+  {
+   "no": "004",
+   "name": "雾冬面包兔",
+   "variant": "垂耳兔",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/004-垂耳兔.webp"
+  },
+  {
+   "no": "005",
+   "name": "雾冬水母",
+   "short": "水母",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/005.webp",
+   "line": "有在听，只是还没加载。",
+   "habitat": "思绪飘走的地方"
+  },
+  {
+   "no": "005",
+   "name": "雾冬水母",
+   "variant": "粉红",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/005-粉红.webp"
+  },
+  {
+   "no": "006",
+   "name": "雾冬史莱姆",
+   "short": "史莱姆",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/006.webp",
+   "line": "今天的形状，取决于沙发。",
+   "habitat": "能瘫下去的任何地方"
+  },
+  {
+   "no": "006",
+   "name": "雾冬史莱姆",
+   "variant": "果冻",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/006-果冻.webp"
+  },
+  {
+   "no": "007",
+   "name": "雾冬狐狸",
+   "short": "狐狸",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/007.webp",
+   "line": "尾巴一摇，坏主意就来了。",
+   "habitat": "藏零食的角落"
+  },
+  {
+   "no": "007",
+   "name": "雾冬狐狸",
+   "variant": "北极狐",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/007-北极狐.webp"
+  },
+  {
+   "no": "007",
+   "name": "雾冬狐狸",
+   "variant": "银狐",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/007-银狐.webp"
+  },
+  {
+   "no": "008",
+   "name": "雾冬小熊猫",
+   "short": "小熊猫",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/008.webp",
+   "line": "别凶了，先抱一下吧。",
+   "habitat": "树杈与抱枕之间"
+  },
+  {
+   "no": "008",
+   "name": "雾冬小熊猫",
+   "variant": "白化",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/008-白化.webp"
+  },
+  {
+   "no": "009",
+   "name": "雾冬企鹅",
+   "short": "企鹅",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/009.webp",
+   "line": "走得慢，但每一步都很认真。",
+   "habitat": "冰箱门口"
+  },
+  {
+   "no": "009",
+   "name": "雾冬企鹅",
+   "variant": "小企鹅宝宝",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/009-小企鹅宝宝.webp"
+  },
+  {
+   "no": "009",
+   "name": "雾冬企鹅",
+   "variant": "帝企鹅",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/009-帝企鹅.webp"
+  },
+  {
+   "no": "010",
+   "name": "雾冬仓鼠",
+   "short": "仓鼠",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/010.webp",
+   "line": "嘴里没空，心里有你。",
+   "habitat": "装满种子的口袋"
+  },
+  {
+   "no": "010",
+   "name": "雾冬仓鼠",
+   "variant": "布丁",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/010-布丁.webp"
+  },
+  {
+   "no": "010",
+   "name": "雾冬仓鼠",
+   "variant": "银狐",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/010-银狐.webp"
+  },
+  {
+   "no": "011",
+   "name": "雾冬水豚",
+   "short": "水豚",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/011.webp",
+   "line": "天塌下来，也先泡完这一会儿。",
+   "habitat": "温暖的水池边"
+  },
+  {
+   "no": "011",
+   "name": "雾冬水豚",
+   "variant": "黑豚",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/011-黑豚.webp"
+  },
+  {
+   "no": "012",
+   "name": "雾冬小蝙蝠",
+   "short": "小蝙蝠",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/012.webp",
+   "line": "白天没回，是因为挂着睡着了。",
+   "habitat": "窗帘后的小角落"
+  },
+  {
+   "no": "012",
+   "name": "雾冬小蝙蝠",
+   "variant": "果蝠",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/012-果蝠.webp"
+  },
+  {
+   "no": "013",
+   "name": "雾冬绵羊",
+   "short": "绵羊",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/013.webp",
+   "line": "今天可以借你一小团温暖。",
+   "habitat": "晒暖的毛毯上"
+  },
+  {
+   "no": "013",
+   "name": "雾冬绵羊",
+   "variant": "黑羊",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/013-黑羊.webp"
+  },
+  {
+   "no": "014",
+   "name": "雾冬小鹿",
+   "short": "小鹿",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/014.webp",
+   "line": "路过一下，顺便看看你。",
+   "habitat": "林间洒满阳光的小路"
+  },
+  {
+   "no": "014",
+   "name": "雾冬小鹿",
+   "variant": "梅花鹿",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/014-梅花鹿.webp"
+  },
+  {
+   "no": "014",
+   "name": "雾冬小鹿",
+   "variant": "驯鹿",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/014-驯鹿.webp"
+  },
+  {
+   "no": "015",
+   "name": "雾冬章鱼",
+   "short": "章鱼",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/015.webp",
+   "line": "手有点多，刚好都能抱住你。",
+   "habitat": "海边的浅浅小水洼"
+  },
+  {
+   "no": "015",
+   "name": "雾冬章鱼",
+   "variant": "小飞象",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/015-小飞象.webp"
+  },
+  {
+   "no": "015",
+   "name": "雾冬章鱼",
+   "variant": "蓝环",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/015-蓝环.webp"
+  },
+  {
+   "no": "016",
+   "name": "雾冬小鸭",
+   "short": "小鸭",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/016.webp",
+   "line": "有事嘎一声，没事也能嘎。",
+   "habitat": "装着洗澡玩具的小盆里"
+  },
+  {
+   "no": "016",
+   "name": "雾冬小鸭",
+   "variant": "鸳鸯",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/016-鸳鸯.webp"
+  },
+  {
+   "no": "017",
+   "name": "雾冬刺猬",
+   "short": "刺猬",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/017.webp",
+   "line": "刺朝外，软肚皮朝你。",
+   "habitat": "落叶堆旁的软垫"
+  },
+  {
+   "no": "017",
+   "name": "雾冬刺猬",
+   "variant": "白刺猬",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/017-白刺猬.webp"
+  },
+  {
+   "no": "018",
+   "name": "雾菇",
+   "short": "雾菇",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/018.webp",
+   "line": "今天的计划是慢慢长大一点点。",
+   "habitat": "雨后的小树根旁"
+  },
+  {
+   "no": "018",
+   "name": "雾菇",
+   "variant": "毒蝇伞",
+   "series": "谐音梗博物馆",
+   "type": "variant",
+   "file": "variant/018-毒蝇伞.webp"
+  },
+  {
+   "no": "019",
+   "name": "雾贼",
+   "short": "乌贼",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/019.webp",
+   "line": "有贼！偷走了零食，还偷走了你的胃。",
+   "habitat": "零食罐旁的小水洼"
+  },
+  {
+   "no": "019",
+   "name": "雾贼",
+   "variant": "萤火鱿",
+   "series": "谐音梗博物馆",
+   "type": "variant",
+   "file": "variant/019-萤火鱿.webp"
+  },
+  {
+   "no": "020",
+   "name": "雾龟",
+   "short": "乌龟",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/020.webp",
+   "line": "不是不回消息，是头还没伸出来。",
+   "habitat": "能晒到太阳的小石头上"
+  },
+  {
+   "no": "020",
+   "name": "雾龟",
+   "variant": "陆龟",
+   "series": "谐音梗博物馆",
+   "type": "variant",
+   "file": "variant/020-陆龟.webp"
+  },
+  {
+   "no": "021",
+   "name": "雾鸦",
+   "short": "乌鸦",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/021.webp",
+   "line": "嘴硬，但会把最亮的东西叼给你。",
+   "habitat": "藏着亮晶晶的小窗台"
+  },
+  {
+   "no": "021",
+   "name": "雾鸦",
+   "variant": "喜鹊",
+   "series": "谐音梗博物馆",
+   "type": "variant",
+   "file": "variant/021-喜鹊.webp"
+  },
+  {
+   "no": "021",
+   "name": "雾鸦",
+   "variant": "白鸽",
+   "series": "谐音梗博物馆",
+   "type": "variant",
+   "file": "variant/021-白鸽.webp"
+  },
+  {
+   "no": "022",
+   "name": "雾线鼠",
+   "short": "雾线鼠",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/022.webp",
+   "line": "点哪里，哪里就会吱一声。",
+   "habitat": "铺着鼠标垫的小桌上"
+  },
+  {
+   "no": "023",
+   "name": "雾龙茶",
+   "short": "雾龙茶",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/023.webp",
+   "line": "今天也要泡得暖暖的。",
+   "habitat": "冒着热气的小茶杯里"
+  },
+  {
+   "no": "024",
+   "name": "雾人机",
+   "short": "雾人机",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/024.webp",
+   "line": "飞得不快，摸鱼很稳。",
+   "habitat": "桌面上方一小段空气里"
+  },
+  {
+   "no": "025",
+   "name": "雾花果",
+   "short": "雾花果",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/025.webp",
+   "line": "紫皮粉心，把甜藏在肚子里。",
+   "habitat": "午后安静的小果盘里"
+  },
+  {
+   "no": "026",
+   "name": "雾籽西瓜",
+   "short": "雾籽西瓜",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/026.webp",
+   "line": "没有烦人的籽，只有圆圆的我。",
+   "habitat": "冰箱里最凉快的那一格"
+  },
+  {
+   "no": "027",
+   "name": "雾冬面",
+   "short": "雾冬面",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/027.webp",
+   "line": "白毛卷一卷，脸藏碗沿边。",
+   "habitat": "冒着热气的小面碗里"
+  },
+  {
+   "no": "028",
+   "name": "雾云",
+   "short": "雾云",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/028.webp",
+   "line": "困了就掉几滴雨，不是哭啦。",
+   "habitat": "午睡窗边的一小片天空"
+  },
+  {
+   "no": "029",
+   "name": "雾仁月饼",
+   "short": "雾仁月饼",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/029.webp",
+   "line": "把香甜收好，等你一起过节。",
+   "habitat": "月光照到的小点心盒里"
+  },
+  {
+   "no": "030",
+   "name": "雾糖可乐",
+   "short": "雾糖可乐",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/030.webp",
+   "line": "不加糖，也能冒快乐泡泡。",
+   "habitat": "冰箱门上最靠前的一格"
+  },
+  {
+   "no": "031",
+   "name": "雾梅",
+   "short": "雾梅",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/031.webp",
+   "line": "嘴巴有点酸，喜欢你倒是真的。",
+   "habitat": "果盘里不起眼的小角落"
+  },
+  {
+   "no": "032",
+   "name": "雾花肉",
+   "short": "雾花肉",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/032.webp",
+   "line": "肥瘦分明，躺得理直气壮。",
+   "habitat": "厨房里等开饭的小案板旁"
+  },
+  {
+   "no": "033",
+   "name": "雾冬海獭",
+   "short": "海獭",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/033.webp",
+   "line": "抱紧小贝壳，今天也不撒手。",
+   "habitat": "安静漂着的小海湾"
+  },
+  {
+   "no": "033",
+   "name": "雾冬海獭",
+   "variant": "水獭",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/033-水獭.webp"
+  },
+  {
+   "no": "034",
+   "name": "雾冬猫头鹰",
+   "short": "猫头鹰",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/034.webp",
+   "line": "白天困困，晚上认真盯着你。",
+   "habitat": "窗外安静的小树枝上"
+  },
+  {
+   "no": "034",
+   "name": "雾冬猫头鹰",
+   "variant": "雪鸮",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/034-雪鸮.webp"
+  },
+  {
+   "no": "035",
+   "name": "雾冬美西螈",
+   "short": "美西螈",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/035.webp",
+   "line": "腮腮晃一晃，烦恼先放旁边。",
+   "habitat": "水草旁的浅浅小水池"
+  },
+  {
+   "no": "035",
+   "name": "雾冬美西螈",
+   "variant": "蓝紫",
+   "series": "小雾动物园",
+   "type": "special",
+   "file": "variant/035-蓝紫.webp"
+  },
+  {
+   "no": "035",
+   "name": "雾冬美西螈",
+   "variant": "金色",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/035-金色.webp"
+  },
+  {
+   "no": "035",
+   "name": "雾冬美西螈",
+   "variant": "黑色",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/035-黑色.webp"
+  },
+  {
+   "no": "036",
+   "name": "雾冬河豚",
+   "short": "河豚",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/036.webp",
+   "line": "气鼓鼓是外形，心里没有生气。",
+   "habitat": "有小气泡的珊瑚旁"
+  },
+  {
+   "no": "036",
+   "name": "雾冬河豚",
+   "variant": "刺鲀",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/036-刺鲀.webp"
+  },
+  {
+   "no": "037",
+   "name": "雾冬浣熊",
+   "short": "浣熊",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/037.webp",
+   "line": "爪爪很干净，零食可以给我了。",
+   "habitat": "小溪边的零食篮旁"
+  },
+  {
+   "no": "037",
+   "name": "雾冬浣熊",
+   "variant": "白化",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/037-白化.webp"
+  },
+  {
+   "no": "038",
+   "name": "雾冬考拉",
+   "short": "考拉",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/038.webp",
+   "line": "叶子抱好了，我再睡五分钟。",
+   "habitat": "抱起来刚好的小树杈上"
+  },
+  {
+   "no": "038",
+   "name": "雾冬考拉",
+   "variant": "袋熊",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/038-袋熊.webp"
+  },
+  {
+   "no": "039",
+   "name": "雾冬北极熊",
+   "short": "北极熊",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/039.webp",
+   "line": "外面冰冰凉，肚皮暖呼呼。",
+   "habitat": "铺着软雪的小冰坡上"
+  },
+  {
+   "no": "039",
+   "name": "雾冬北极熊",
+   "variant": "棕熊",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/039-棕熊.webp"
+  },
+  {
+   "no": "039",
+   "name": "雾冬北极熊",
+   "variant": "熊猫",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/039-熊猫.webp"
+  },
+  {
+   "no": "039",
+   "name": "雾冬北极熊",
+   "variant": "黑熊",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/039-黑熊.webp"
+  },
+  {
+   "no": "040",
+   "name": "雾冬蜜蜂",
+   "short": "蜜蜂",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/040.webp",
+   "line": "嗡嗡忙半天，采的是快乐。",
+   "habitat": "晒着太阳的小花丛里"
+  },
+  {
+   "no": "040",
+   "name": "雾冬蜜蜂",
+   "variant": "熊蜂",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/040-熊蜂.webp"
+  },
+  {
+   "no": "041",
+   "name": "雾冬魔鬼鱼",
+   "short": "魔鬼鱼",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/041.webp",
+   "line": "把小翅膀摊开，慢慢飘过来。",
+   "habitat": "有柔软海流的浅海里"
+  },
+  {
+   "no": "041",
+   "name": "雾冬魔鬼鱼",
+   "variant": "鳐鱼",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/041-鳐鱼.webp"
+  },
+  {
+   "no": "042",
+   "name": "雾语",
+   "short": "雾语",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/042.webp",
+   "line": "……你自己听听这合理吗。",
+   "habitat": "聊天框里安静的角落"
+  },
+  {
+   "no": "043",
+   "name": "雾价之宝",
+   "short": "雾价之宝",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/043.webp",
+   "line": "里面没有金币，只有很珍贵的我。",
+   "habitat": "藏着小秘密的宝箱里"
+  },
+  {
+   "no": "044",
+   "name": "雾精打采",
+   "short": "雾精打采",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/044.webp",
+   "line": "醒了，但没完全醒。",
+   "habitat": "枕头旁边的小床头柜上"
+  },
+  {
+   "no": "045",
+   "name": "雾线耳机",
+   "short": "雾线耳机",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/045.webp",
+   "line": "两只耳朵，专门听你碎碎念。",
+   "habitat": "随身口袋里的充电盒中"
+  },
+  {
+   "no": "046",
+   "name": "雾流",
+   "short": "快递箱",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/046.webp",
+   "line": "已发货，预计送达时间：看心情。",
+   "habitat": "门口等待签收的小包裹堆里"
+  },
+  {
+   "no": "047",
+   "name": "服雾",
+   "short": "客服",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/047.webp",
+   "line": "您好，这里是小雾客服，您的问题已记录（并不会处理）。",
+   "habitat": "排队人数永远为一的小客服窗口"
+  },
+  {
+   "no": "048",
+   "name": "雾扰",
+   "short": "门挂牌",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/048.webp",
+   "line": "请勿打扰，正在发呆。",
+   "habitat": "门把手上安静的小角落"
+  },
+  {
+   "no": "049",
+   "name": "医雾室",
+   "short": "药箱",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/049.webp",
+   "line": "哪里不舒服？先多喝热水。",
+   "habitat": "走廊尽头的小药箱旁"
+  },
+  {
+   "no": "050",
+   "name": "宠雾医院",
+   "short": "宠物诊所",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/050.webp",
+   "line": "才、才不怕打针呢。",
+   "habitat": "小爪印招牌下的诊所门口"
+  },
+  {
+   "no": "051",
+   "name": "雾人便利店",
+   "short": "便利店",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/051.webp",
+   "line": "24小时营业，店员不在，请自助结账。",
+   "habitat": "路口亮着灯的迷你小店"
+  },
+  {
+   "no": "052",
+   "name": "博雾馆",
+   "short": "博物馆",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/052.webp",
+   "line": "本馆镇馆之宝：小雾昨天没写完的作业。",
+   "habitat": "收藏奇怪宝贝的小展厅里"
+  },
+  {
+   "no": "053",
+   "name": "购雾",
+   "short": "购物袋",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/053.webp",
+   "line": "本月预算：已用完。心情：很好。",
+   "habitat": "装满小快乐的购物袋里"
+  },
+  {
+   "no": "054",
+   "name": "服雾区",
+   "short": "服务区",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/054.webp",
+   "line": "前方2公里服雾区，记得休息一下。",
+   "habitat": "前方两公里的休息路口"
+  },
+  {
+   "no": "062",
+   "name": "雾所不能",
+   "short": "工具人",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/062.webp",
+   "line": "什么都能修，修不好就再拆一遍。",
+   "habitat": "堆满工具的小工地"
+  },
+  {
+   "no": "063",
+   "name": "雾理取闹",
+   "short": "耍赖",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/063.webp",
+   "line": "我不管，今天就要摸鱼。",
+   "habitat": "地板上最适合打滚的那一块"
+  },
+  {
+   "no": "064",
+   "name": "雾影雾踪",
+   "short": "忍者",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/064.webp",
+   "line": "你看不见我，你看不见我……",
+   "habitat": "烟雾散开的屋檐角落"
+  },
+  {
+   "no": "065",
+   "name": "雾林高手",
+   "short": "功夫",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/065.webp",
+   "line": "看我一招……算了，太累了。",
+   "habitat": "后院练功的小木桩旁"
+  },
+  {
+   "no": "066",
+   "name": "雾敌是多么寂寞",
+   "short": "无敌",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/066.webp",
+   "line": "无敌，是多么，多么寂寞。",
+   "habitat": "风很大的小山顶"
+  },
+  {
+   "no": "067",
+   "name": "雾中生有",
+   "short": "魔术师",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/067.webp",
+   "line": "看好了，帽子里什么都没有……出来了！",
+   "habitat": "魔术帽里看不见底的地方"
+  },
+  {
+   "no": "068",
+   "name": "跳雾",
+   "short": "芭蕾",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/068.webp",
+   "line": "转圈圈……转晕了。",
+   "habitat": "音乐盒上的小舞台"
+  },
+  {
+   "no": "069",
+   "name": "雾色雾香",
+   "short": "泡泡浴",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/069.webp",
+   "line": "今天也是香香的一天。",
+   "habitat": "飘着花瓣的小浴缸里"
+  },
+  {
+   "no": "070",
+   "name": "雾空",
+   "short": "悟空",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/070.webp",
+   "line": "俺老雾来也！（然后在云上睡着了）",
+   "habitat": "一朵慢悠悠的筋斗云上"
+  },
+  {
+   "no": "071",
+   "name": "雾业游民",
+   "short": "躺平",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/071.webp",
+   "line": "今天的工作是：躺着。",
+   "habitat": "被零食包围的懒人沙发上"
+  },
+  {
+   "no": "072",
+   "name": "雾厘头",
+   "short": "搞怪",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/072.webp",
+   "line": "别问，问就是好玩。",
+   "habitat": "头顶放着香蕉的地方"
+  },
+  {
+   "no": "073",
+   "name": "雾与伦比",
+   "short": "舞台",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/073.webp",
+   "line": "今晚的舞台，属于我。",
+   "habitat": "聚光灯正中间"
+  },
+  {
+   "no": "074",
+   "name": "雾忧雾虑",
+   "short": "晒太阳",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/074.webp",
+   "line": "什么都不想，晒晒太阳就好。",
+   "habitat": "有阳光的小草地"
+  },
+  {
+   "no": "075",
+   "name": "雾底洞",
+   "short": "大胃王",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/075.webp",
+   "line": "还能吃，再来一碗。",
+   "habitat": "比脸还大的饭碗前"
+  },
+  {
+   "no": "076",
+   "name": "雾冬树懒",
+   "short": "树懒",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/076.webp",
+   "line": "慢慢来，比较快……先睡一会儿。",
+   "habitat": "慢悠悠晃着的小树枝上"
+  },
+  {
+   "no": "076",
+   "name": "雾冬树懒",
+   "variant": "二趾",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/076-二趾.webp"
+  },
+  {
+   "no": "076",
+   "name": "雾冬树懒",
+   "variant": "苔藓",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/076-苔藓.webp"
+  },
+  {
+   "no": "077",
+   "name": "雾冬柴犬",
+   "short": "柴犬",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/077.webp",
+   "line": "歪头杀，对你有效吗？",
+   "habitat": "门口晒太阳的小垫子上"
+  },
+  {
+   "no": "077",
+   "name": "雾冬柴犬",
+   "variant": "白柴",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/077-白柴.webp"
+  },
+  {
+   "no": "077",
+   "name": "雾冬柴犬",
+   "variant": "黑柴",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/077-黑柴.webp"
+  },
+  {
+   "no": "078",
+   "name": "雾冬小鲸鱼",
+   "short": "小鲸鱼",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/078.webp",
+   "line": "喷一朵雾给你看。",
+   "habitat": "海面上冒着雾的地方"
+  },
+  {
+   "no": "078",
+   "name": "雾冬小鲸鱼",
+   "variant": "白鲸",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/078-白鲸.webp"
+  },
+  {
+   "no": "078",
+   "name": "雾冬小鲸鱼",
+   "variant": "虎鲸",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/078-虎鲸.webp"
+  },
+  {
+   "no": "079",
+   "name": "雾姐",
+   "short": "雾姐",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/079.webp",
+   "line": "别误解，我只是看起来很凶。",
+   "habitat": "群聊里被误解的角落"
+  },
+  {
+   "no": "080",
+   "name": "雾触",
+   "short": "雾触",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/080.webp",
+   "line": "我没点，是手机自己动的。",
+   "habitat": "手机屏幕最容易点错的地方"
+  },
+  {
+   "no": "081",
+   "name": "雾老师",
+   "short": "雾老师",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/081.webp",
+   "line": "这道题我讲最后一遍，下次还讲。",
+   "habitat": "放学后还没擦的黑板前"
+  },
+  {
+   "no": "082",
+   "name": "雾所事事",
+   "short": "闲人",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/082.webp",
+   "line": "今天的任务是：没有任务。",
+   "habitat": "软软的懒人垫上"
+  },
+  {
+   "no": "083",
+   "name": "雾睡",
+   "short": "午睡",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/083.webp",
+   "line": "午睡十分钟，醒来是晚上。",
+   "habitat": "午后的课桌上"
+  },
+  {
+   "no": "084",
+   "name": "雾蹈",
+   "short": "舞蹈",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/084.webp",
+   "line": "蹦吧蹦吧，跳完再说。",
+   "habitat": "会发光的小舞池"
+  },
+  {
+   "no": "085",
+   "name": "雾星好评",
+   "short": "五星",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/085.webp",
+   "line": "服务满意的话，给个五星吧～",
+   "habitat": "评价页的最上面"
+  },
+  {
+   "no": "086",
+   "name": "雾归原主",
+   "short": "失物招领",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/086.webp",
+   "line": "这是你掉的金鱼，还是这条银鱼？",
+   "habitat": "失物招领处的小柜台"
+  },
+  {
+   "no": "087",
+   "name": "不雾正业",
+   "short": "摸鱼人",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/087.webp",
+   "line": "工作？在做了在做了。",
+   "habitat": "老板看不到的工位"
+  },
+  {
+   "no": "088",
+   "name": "雾言以对",
+   "short": "无语",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/088.webp",
+   "line": "我的母语是无语。",
+   "habitat": "风滚草路过的地方"
+  },
+  {
+   "no": "089",
+   "name": "雾机",
+   "short": "纸飞机",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/089.webp",
+   "line": "飞出去！……等等，飞机没等我。",
+   "habitat": "云朵上面一点点"
+  },
+  {
+   "no": "090",
+   "name": "雾以类聚",
+   "short": "一群雾",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/090.webp",
+   "line": "一只雾不够，那就一群。",
+   "habitat": "挤成一团的小角落"
+  },
+  {
+   "no": "091",
+   "name": "雾顶",
+   "short": "屋顶",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/091.webp",
+   "line": "屋顶的风很舒服，星星也很近。",
+   "habitat": "能看到星星的屋顶"
+  },
+  {
+   "no": "092",
+   "name": "雾聊",
+   "short": "无聊",
+   "series": "谐音梗博物馆",
+   "type": "normal",
+   "label": "",
+   "file": "normal/092.webp",
+   "line": "好无聊……有人陪我聊天吗？",
+   "habitat": "没人说话的群聊"
+  },
+  {
+   "no": "093",
+   "name": "雾冬松鼠",
+   "short": "松鼠",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/093.webp",
+   "line": "松果藏好了，藏哪了来着？",
+   "habitat": "藏满松果的树洞"
+  },
+  {
+   "no": "093",
+   "name": "雾冬松鼠",
+   "variant": "灰松鼠",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/093-灰松鼠.webp"
+  },
+  {
+   "no": "093",
+   "name": "雾冬松鼠",
+   "variant": "花栗鼠",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/093-花栗鼠.webp"
+  },
+  {
+   "no": "094",
+   "name": "雾冬羊驼",
+   "short": "羊驼",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/094.webp",
+   "line": "我不吐口水，我只吐槽。",
+   "habitat": "高原上的小草坡"
+  },
+  {
+   "no": "094",
+   "name": "雾冬羊驼",
+   "variant": "棕羊驼",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/094-棕羊驼.webp"
+  },
+  {
+   "no": "094",
+   "name": "雾冬羊驼",
+   "variant": "黑羊驼",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/094-黑羊驼.webp"
+  },
+  {
+   "no": "095",
+   "name": "雾冬蜗牛",
+   "short": "蜗牛",
+   "series": "小雾动物园",
+   "type": "normal",
+   "label": "",
+   "file": "normal/095.webp",
+   "line": "慢慢来，我在路上了。",
+   "habitat": "雨后湿漉漉的叶子上"
+  },
+  {
+   "no": "095",
+   "name": "雾冬蜗牛",
+   "variant": "糖果壳",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/095-糖果壳.webp"
+  },
+  {
+   "no": "095",
+   "name": "雾冬蜗牛",
+   "variant": "金壳",
+   "series": "小雾动物园",
+   "type": "variant",
+   "file": "variant/095-金壳.webp"
+  },
+  {
+   "no": "055",
+   "name": "南瓜雾灯",
+   "short": "南瓜灯",
+   "series": "限定",
+   "type": "holiday",
+   "label": "万圣节限定",
+   "file": "holiday/055.webp",
+   "line": "不给糖就捣蛋，给了糖也捣蛋。",
+   "habitat": "万圣夜亮着光的门口"
+  },
+  {
+   "no": "055",
+   "name": "南瓜雾灯",
+   "variant": "幽灵南瓜",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/055-幽灵南瓜.webp"
+  },
+  {
+   "no": "055",
+   "name": "南瓜雾灯",
+   "variant": "紫焰南瓜",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/055-紫焰南瓜.webp"
+  },
+  {
+   "no": "056",
+   "name": "雾鸡大餐",
+   "short": "火鸡",
+   "series": "限定",
+   "type": "holiday",
+   "label": "感恩节限定",
+   "file": "holiday/056.webp",
+   "line": "今天的主角是我，但请不要吃我。",
+   "habitat": "感恩节餐桌的正中间"
+  },
+  {
+   "no": "056",
+   "name": "雾鸡大餐",
+   "variant": "感恩派对",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/056-感恩派对.webp"
+  },
+  {
+   "no": "056",
+   "name": "雾鸡大餐",
+   "variant": "黄金烤鸡",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/056-黄金烤鸡.webp"
+  },
+  {
+   "no": "057",
+   "name": "雾凇圣诞树",
+   "short": "圣诞树",
+   "series": "限定",
+   "type": "holiday",
+   "label": "圣诞限定",
+   "file": "holiday/057.webp",
+   "line": "挂满了雾凇，也挂满了你的愿望。",
+   "habitat": "挂满彩灯的窗边"
+  },
+  {
+   "no": "057",
+   "name": "雾凇圣诞树",
+   "variant": "粉雪圣诞树",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/057-粉雪圣诞树.webp"
+  },
+  {
+   "no": "057",
+   "name": "雾凇圣诞树",
+   "variant": "金色圣诞树",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/057-金色圣诞树.webp"
+  },
+  {
+   "no": "061",
+   "name": "平安雾果",
+   "short": "平安果",
+   "series": "限定",
+   "type": "holiday",
+   "label": "平安夜限定",
+   "file": "holiday/061.webp",
+   "line": "平安夜吃个苹果，一整年都平平安安。",
+   "habitat": "平安夜包着彩纸的小盒子里"
+  },
+  {
+   "no": "061",
+   "name": "平安雾果",
+   "variant": "金苹果",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/061-金苹果.webp"
+  },
+  {
+   "no": "061",
+   "name": "平安雾果",
+   "variant": "雪花苹果",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/061-雪花苹果.webp"
+  },
+  {
+   "no": "058",
+   "name": "年年有雾",
+   "short": "锦鲤",
+   "series": "限定",
+   "type": "holiday",
+   "label": "春节限定",
+   "file": "holiday/058.webp",
+   "line": "年年有雾，岁岁有你。",
+   "habitat": "贴着福字的年夜饭桌旁"
+  },
+  {
+   "no": "058",
+   "name": "年年有雾",
+   "variant": "墨锦鲤",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/058-墨锦鲤.webp"
+  },
+  {
+   "no": "058",
+   "name": "年年有雾",
+   "variant": "金鳞锦鲤",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/058-金鳞锦鲤.webp"
+  },
+  {
+   "no": "059",
+   "name": "雾宵灯笼",
+   "short": "灯笼",
+   "series": "限定",
+   "type": "holiday",
+   "label": "元宵限定",
+   "file": "holiday/059.webp",
+   "line": "猜个灯谜：什么东西越点越亮？是你。",
+   "habitat": "挂满灯谜的元宵夜街口"
+  },
+  {
+   "no": "059",
+   "name": "雾宵灯笼",
+   "variant": "兔子灯",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/059-兔子灯.webp"
+  },
+  {
+   "no": "059",
+   "name": "雾宵灯笼",
+   "variant": "莲花灯",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/059-莲花灯.webp"
+  },
+  {
+   "no": "060",
+   "name": "生日雾糕",
+   "short": "生日蛋糕",
+   "series": "限定",
+   "type": "holiday",
+   "label": "小雾生日限定",
+   "file": "holiday/060.webp",
+   "line": "今天是小雾的生日，许个愿吧，我帮你偷偷告诉她。",
+   "habitat": "6 月 19 日的生日派对上"
+  },
+  {
+   "no": "060",
+   "name": "生日雾糕",
+   "variant": "星空蛋糕",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/060-星空蛋糕.webp"
+  },
+  {
+   "no": "060",
+   "name": "生日雾糕",
+   "variant": "草莓城堡",
+   "series": "限定",
+   "type": "holiday-rare",
+   "file": "variant/060-草莓城堡.webp"
+  }
+ ]
+}
