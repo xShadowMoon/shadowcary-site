@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN" class="l-zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>AI 翻唱</title>
+<meta name="description" content="用 AI 模型合成的小雾翻唱，已获小雾本人同意。">
+<style>
+@font-face{font-family:"Space Grotesk";font-weight:300 700;font-display:swap;src:url(/fonts/space-grotesk.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Inter;font-weight:100 900;font-display:swap;src:url(/fonts/inter.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F}
+:root{--bg:#f5f3fc;--card:#fff;--ink:#2b2d42;--sub:#7d8199;--line:#e6e2f5;--pink:#fb7299;--lav:#8e7cf0;--chip:#efecfa}
+@media(prefers-color-scheme:dark){:root{--bg:#14131b;--card:#1f1e29;--ink:#ecebf3;--sub:#9a98ad;--line:#2e2c3c;--chip:#2a2836}}
+html.l-en .zh,html.l-zh .en{display:none!important}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:14px;color:var(--sub)}
+nav b{font:700 16px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink)}
+nav .links{display:flex;gap:16px;align-items:center}
+nav a:hover{color:var(--pink)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:4px 10px;font:600 13px Inter,sans-serif;cursor:pointer}
+header{padding:28px 0 18px}
+h1{font:700 clamp(30px,5vw,44px)/1.15 "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+header p{color:var(--sub);margin-top:6px;max-width:680px}
+.notice{display:inline-flex;gap:8px;align-items:center;margin-top:14px;background:#fff3d6;color:#8a5a00;border-radius:12px;padding:8px 14px;font-size:14px;font-weight:600}
+@media(prefers-color-scheme:dark){.notice{background:#3a2e14;color:#f2c76b}}
+.list{display:grid;gap:22px;padding:10px 0 40px;max-width:780px}
+.cv{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.player{position:relative;aspect-ratio:16/9;background:#000}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player .cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.player .play{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer;background:linear-gradient(transparent 50%,rgba(0,0,0,.45))}
+.player .play span{width:74px;height:74px;border-radius:50%;background:rgba(251,114,153,.92);display:grid;place-items:center;color:#fff;font-size:30px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.info{padding:16px 20px 18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.info h2{font-size:20px}
+.info p{color:var(--sub);font-size:14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;background:var(--chip);color:var(--lav);padding:1px 9px;border-radius:99px;margin-right:6px}
+.tag.ai{background:#ffe3ea;color:#d9406b}
+.btn{padding:9px 16px;border-radius:11px;font-weight:600;font-size:14px;background:var(--pink);color:#fff;white-space:nowrap}
+footer{padding:24px 0 40px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
+</style>
+<script>(function(){var l="zh";try{l=localStorage.getItem("lang")||l}catch(e){}if(location.hash=="#en")l="en";document.documentElement.className="l-"+l})();
+function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":"en";h.className="l-"+l;h.lang=l=="zh"?"zh-CN":"en";try{localStorage.setItem("lang",l)}catch(e){}}</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="/"><b>🐟 <span class="zh">雾冬hanaki 粉丝站</span><span class="en">Hanaki Fan Hub</span></b></a><div class="links"><a href="/songs/"><span class="zh">歌切</span><span class="en">Songs</span></a><a href="/"><span class="zh">首页</span><span class="en">Home</span></a><button class="lang" onclick="toggleLang()"><span class="zh">EN</span><span class="en">中文</span></button></div></div></nav>
+<div class="wrap">
+<header>
+  <h1><span class="zh">🎧 AI 翻唱</span><span class="en">🎧 AI Covers</span></h1>
+  <p><span class="zh">用小雾的声音训练了一个唱歌模型，再一版版调混音做出来的翻唱。点封面直接在这里播放，也可以去 B站看。</span><span class="en">Covers made with a singing-voice model trained on Hanaki's voice, mixed by hand over many versions. Tap a cover to play it here, or watch on Bilibili.</span></p>
+  <div class="notice">⚠️ <span class="zh">AI 合成，不是小雾本人演唱。已获小雾本人同意。</span><span class="en">AI-generated, not sung by Hanaki herself. Made with her permission.</span></div>
+</header>
+<div class="list" id="list"></div>
+</div>
+<footer><div class="wrap"><span class="zh">粉丝自制，与雾冬hanaki 官方无关。</span><span class="en">Fan-made, not affiliated with Hanaki.</span> · <a href="https://shadowcary.com">Shadow Cary</a></div></footer>
+<script>
+var COVERS=[
+ {bv:"BV1LnJy6KEw5",zh:"小雾是猫",en:"Xiaowu Is a Cat",orig:"人是猫",len:"02:17",pic:"https://i2.hdslb.com/bfs/archive/e3d9f727ea22f6b7d38d1826e0d9622bfca21657.png",note:"画面和声音全部由 AI 制作",noteEn:"Video and voice are fully AI-made"},
+ {bv:"BV1vuxF64EK7",zh:"嘣吧嘣吧嘣吧",en:"Boom Ba Boom Ba",orig:"",len:"02:20",pic:"https://i1.hdslb.com/bfs/archive/d7d0d5333ed2fd80d96eaafcec71e10d75d892fd.jpg",note:"听完感觉人都通透了",noteEn:"A fun one"}
+];
+document.getElementById("list").innerHTML=COVERS.map(function(c){
+ return '<article class="cv"><div class="player" data-bv="'+c.bv+'"><img class="cover" src="'+c.pic+'@960w.webp" alt=""><div class="play"><span>▶</span></div></div>'+
+  '<div class="info"><div><h2><span class="zh">'+c.zh+'</span><span class="en">'+c.en+' · '+c.zh+'</span></h2><p><span class="tag ai">AI</span>'+(c.orig?'<span class="zh">原曲《'+c.orig+'》 · </span><span class="en">Original: '+c.orig+' · </span>':'')+c.len+' · <span class="zh">'+c.note+'</span><span class="en">'+c.noteEn+'</span></p></div>'+
+  '<a class="btn" href="https://www.bilibili.com/video/'+c.bv+'"><span class="zh">去 B站看</span><span class="en">Watch on Bilibili</span></a></div></article>'}).join("");
+document.addEventListener("click",function(e){var p=e.target.closest(".player");if(!p||p.querySelector("iframe"))return;
+ p.innerHTML='<iframe src="https://player.bilibili.com/player.html?bvid='+p.dataset.bv+'&autoplay=1&high_quality=1&danmaku=0" allow="autoplay; fullscreen" allowfullscreen scrolling="no"></iframe>'});
+</script>
+</body>
+</html>

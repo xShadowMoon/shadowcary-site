@@ -37,7 +37,7 @@ nav a:hover{color:var(--pink)}
 section{padding:40px 0}
 h2{font:700 28px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
 .sub{color:var(--sub);margin:4px 0 24px}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;transition:.2s}
 .tile:hover{border-color:var(--pink);transform:translateY(-3px)}
 .tile .ico{font-size:34px}
@@ -55,7 +55,7 @@ h2{font:700 28px "Space Grotesk",Inter,"PingFang SC","Microsoft YaHei",system-ui
 footer{padding:36px 0 48px;color:var(--sub);font-size:13.5px;border-top:1px solid var(--line);margin-top:30px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.hero,.tiles{grid-template-columns:1fr}.stack{height:230px}.stack img{width:140px}.stack img:nth-child(2){width:160px}nav .links a:not(:last-child){display:none}}
-.links2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.links2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .lk{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:.2s}
 a.lk:hover{border-color:var(--pink);transform:translateY(-2px)}
 .lk .e{font-size:28px}
@@ -95,6 +95,7 @@ function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":
     <a class="tile" href="/songs/"><div class="ico">🎤</div><h3><span class="zh">歌切合集</span><span class="en">Song Clips</span></h3><p class="zh">切片号 Ro琪希 上传的全部歌切，可以按歌名或原唱搜索，有新歌切会自动更新。</p><p class="en">All song clips uploaded by Ro琪希, searchable by song or original artist. Updates automatically.</p><span class="go"><span class="zh">打开 →</span><span class="en">Open →</span></span></a>
     <a class="tile" href="wsw/"><div class="ico">🃏</div><h3><span class="zh">WSW 图鉴</span><span class="en">WSW Gallery</span></h3><p class="zh">今日WSW 的 88 款普通卡、71 款异色和节日限定款。</p><p class="en">88 regular cards, 71 alternate colors and holiday limited editions from the daily WSW draw.</p><span class="go"><span class="zh">打开 →</span><span class="en">Open →</span></span></a>
     <a class="tile" href="fortune/"><div class="ico">🔮</div><h3><span class="zh">占卜和塔罗</span><span class="en">Fortune &amp; Tarot</span></h3><p class="zh">群机器人的每日签运和小雾手绘塔罗牌，网页上也能抽一签。</p><p class="en">Daily fortune slips and the hand-drawn tarot deck from the group bot. Draw one right here.</p><span class="go"><span class="zh">去抽一签 →</span><span class="en">Try it →</span></span></a>
+    <a class="tile" href="covers/"><div class="ico">🎧</div><h3><span class="zh">AI 翻唱</span><span class="en">AI Covers</span></h3><p class="zh">用小雾声音模型做的翻唱，标注 AI 合成，已获本人同意。</p><p class="en">Covers made with a voice model of Hanaki, clearly marked as AI, with her permission.</p><span class="go"><span class="zh">去听 →</span><span class="en">Listen →</span></span></a>
   </div>
 </section>
 
@@ -117,6 +118,7 @@ function toggleLang(){var h=document.documentElement,l=h.className=="l-en"?"zh":
   <p class="sub"><span class="zh">找小雾和切片都在这里。</span><span class="en">Where to find Hanaki and the clips.</span></p>
   <div class="links2">
     <a class="lk" href="https://live.bilibili.com/373317"><span class="e">📺</span><div><b><span class="zh">B站直播间</span><span class="en">Bilibili live room</span></b><small><span class="zh">房间号 373317，开播会在群里提醒</span><span class="en">Room 373317</span></small></div></a>
+    <a class="lk" href="https://space.bilibili.com/14468462"><span class="e">🌸</span><div><b><span class="zh">小雾的 B站主页</span><span class="en">Hanaki on Bilibili</span></b><small><span class="zh">投稿、动态和直播回放</span><span class="en">Videos and posts</span></small></div></a>
     <a class="lk" href="https://space.bilibili.com/3707002725337436"><span class="e">✂️</span><div><b><span class="zh">切片man · Ro琪希</span><span class="en">Clipper · Ro琪希</span></b><small><span class="zh">歌切和直播切片都在这个号上传</span><span class="en">Song clips and stream highlights on Bilibili</span></small></div></a>
     <div class="lk"><span class="e">🐧</span><div><b><span class="zh">粉丝群</span><span class="en">QQ fan group</span></b><small><span class="zh">QQ 群 753070660，WSW 抽卡和占卜都在群里</span><span class="en">QQ group 753070660</span></small></div></div>
   </div>
